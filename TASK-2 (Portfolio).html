@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRINITHI - Web Developer Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #0d0d0d; /* Background color from AR theme */
+            color: #fff;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #1a1a1a;
+            padding: 10px 20px;
+            border-bottom: 1px solid #333;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .nav-left {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #0ff;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #0ff;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: rgba(0, 255, 255, 0.2);
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 80px 20px 20px; /* Added top padding to avoid overlap with fixed nav */
+            background-color: #1a1a1a;
+            border-bottom: 1px solid #333;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #0ff;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+            color: #ccc;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        #about {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #about img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid #0ff;
+        }
+
+        #about p {
+            max-width: 600px;
+            text-align: center;
+            color: #ddd;
+        }
+
+        /* Skills Section */
+        #skills ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(120px, 1fr)); /* Smaller boxes */
+            gap: 10px;
+            max-width: 500px; /* Reduce max width */
+            margin: 40px auto;
+        }
+
+        #skills ul li {
+            background: rgba(0, 255, 255, 0.2);
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-align: center;
+            transition: background 0.3s;
+        }
+
+        #skills ul li:hover {
+            background: rgba(0, 255, 255, 0.5);
+        }
+
+        /* Projects Section */
+#projects .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Set to 2 columns */
+    gap: 20px;
+}
+
+#projects .grid-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+    margin: 50px;
+}
+
+#projects .grid-item:hover {
+    transform: translateY(-10px);
+    opacity: 0.9;
+}
+
+#projects h3 {
+    color: #0ff;
+    margin: 10px 0;
+}
+
+
+        #projects h3 {
+            color: #0ff;
+            margin: 10px 0;
+        }
+
+        /* Resume Section */
+        #resume {
+            text-align: center;
+        }
+
+        #resume a {
+            color: #0ff;
+            text-decoration: none;
+            font-size: 1.2em;
+            border: 1px solid #0ff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        #resume a:hover {
+            background: rgba(0, 255, 255, 0.2);
+        }
+
+        /* Contact Section */
+        #contact {
+            text-align: center;
+        }
+
+        #contact p {
+            font-size: 1.2em;
+            color: #ddd;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #1a1a1a;
+            border-top: 1px solid #333;
+            color: #ccc;
+        }
+        #social-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            gap: 30px;
+        }
+
+        #social-links img {
+            width: 40px;
+            transition: transform 0.3s;
+        }
+
+        #social-links img:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <div class="nav-left">SRINITHI</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>SRINITHI</h1>
+        <p>Web Developer | Building Interactive Experiences</p>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <img src="me.jpg" alt="SRINITHI">
+        <p>I am a passionate web developer specializing in creating dynamic and responsive web applications. With a strong foundation in front-end and back-end technologies, I enjoy transforming ideas into seamless digital experiences.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>C</li>
+            <li>C++</li>
+            <li>java</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Node.js</li>
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <!-- Projects Section -->
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="grid-container">
+        <div class="grid-item">
+            <h3>ONLINE EMPLOYEE LEAVE MANAGEMENT SYSTEM</h3>
+            <p>A system to manage employee leave applications and approvals efficiently. Features include real-time leave tracking, automated approvals, and email notifications.</p>
+        </div>
+        <div class="grid-item">
+            <h3>HR MANAGEMENT SYSTEM</h3>
+            <p>A comprehensive solution for managing HR processes, including recruitment, payroll, and employee records. Integrates employee self-service portals, performance tracking, and payroll management.</p>
+        </div>
+        <div class="grid-item">
+            <h3>DEPARTMENTAL STORE MANAGEMENT SYSTEM</h3>
+            <p>A database-driven application designed to manage inventory, sales, and customer information in a departmental store.Features include product management, billing, stock updates, and sales reports.Implemented using MySQL for the backend, and a user-friendly interface built with Java Swing.</p>
+        </div>
+        <!-- Add more project items as needed -->
+    </div>
+</section>
+
+
+
+    <!-- Resume Section -->
+    <section id="resume">
+        <h2>Resume</h2>
+        <a href="D:\codsoft\resume.html" download>View My Resume</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:srinithimuthusamy@gmail.com">srinithimuthusamy@gmail.com</a></p>
+	    <p>Phone: 9876543210</p>
+    </section>
+<div id="social-links">
+    <a href="#"><img src="data:image/png;base64,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" alt="GitHub"> </a>
+    <a href="#"><img src="https://images.rawpixel.com/image_png_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjk4Mi1kNS0xMF8xLnBuZw.png" alt="LinkedIn"> </a>
+    <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBUuEigCFp7fdjjnoPmrcyoPzXFCvOgY9KAg&s" alt="Mail"> </a>
+</div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 SRINITHI. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
